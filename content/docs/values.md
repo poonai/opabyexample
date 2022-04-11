@@ -1,42 +1,31 @@
 ---
-Title: "Values"
+Title: "Input"
 type: docs
 weight: 2
 ---
 
-# OPA By Example: Values
+# OPA By Example: Input
 
 {{< columns >}}
 
 
 
-Go is an open source programming language designed for building simple, fast, and reliable software.
+input - global variable representing JSON policy query
+data - global variable containing external data
 
-Please read the official documentation to learn a bit about Go code, tools packages, and modules.
+where “servers” is a JSON data object with some array values associated with it.
 
-Go by Example is a hands-on introduction to Go using annotated example programs. Check out the first example or browse the full list below.
-
+validating input JSON data using global var input.
 <--->
 
-```go
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("hello world")
-}
+```rego
+examples
+1. s0 := input.servers[0]
+2. s1 := input.servers[1]	
 
 ```
+
 ```
-$ go run hello-world.go
-hello world
-
-$ go build hello-world.go
-hello-world         hello-world.go
-
-$ ./hello-world
-hello world
-
+1. input.servers[0].id == "app"
 ```
 
