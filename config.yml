@@ -2,3 +2,8 @@ baseURL: http://example.org/
 languageCode: en-us
 title: OPA By Example
 theme: hugo-book
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
