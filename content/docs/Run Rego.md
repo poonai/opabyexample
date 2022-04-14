@@ -8,25 +8,30 @@ weight: 3
 # OPA By Example: Run Rego
 
 {{< columns >}}
-we get output as JSON formatted data.
-
-false, as 1 is not greater than 2, condition not satisfied
 
 
-Explanation :-
-> Here, “value”: false, indicates that the condition we were testing for is not true.
+The simplest way to interact with OPA is via the command-line using the ```opa eval``` sub-command
 
+The output generated, when we run the query, is JSON formatted.
 
+Explanation.
+> Here, ```“value”: false```, indicates that the condition we were testing for is not true.
+
+<br>
+<br>
+
+<strong>line 6: </strong><br>
+```false``` as 1 is not greater than 2, condition not satisfied.
 <--->
 
-```rego
+```js
 command
 $ opa eval '1 > 2'
 
 ```
 
 
-```rego
+```js
 Output.json
 1. {				
 2.   "result": [
@@ -45,5 +50,6 @@ Output.json
 15.  ]
 16.}
 
-
 ```
+
+{{< /columns >}}
