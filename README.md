@@ -7,10 +7,9 @@ This site is hosted on a Hugo theme.
 
 Look at these screenshots to get a brief idea about the site overall look and . 
 
-![](./public/media/one.jpeg)
-
 ![](./public/media/two.jpeg)
 
+![](./public/media/one.jpeg)
 
 ## How to add new page to the site?
 1. Add a new .md file to the ```/content/docs``` folder
