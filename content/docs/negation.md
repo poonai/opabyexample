@@ -28,13 +28,13 @@ Consider a rego object ```obj``` (-->).
 <--->
 <br><br><br>
 
-```js
+```
 obj := {car":"Tata", 
 "color": ["black", “white”], 
 "spec": {"speed": 227}}
 ```
 
-```js
+```
 > not obj.x	// true, there exist no ‘x’
 > not false	// true
 > not 22	// undefined

@@ -31,7 +31,7 @@ Functional rules let you extend the set of built-in functions. <br>
 <--->
 
 
-```js
+```
 policy.rego
 package play
 	max {
@@ -41,7 +41,8 @@ package play
 	b -1 == a		# true
 }
 ```
-```js
+
+```
 input.json
 {
     "x": "1"
@@ -49,7 +50,7 @@ input.json
 }
 ```
 
-```js
+```
 output.json
 {
     "max": true
@@ -59,7 +60,7 @@ output.json
 
 <br><br>
 
-```js
+```
 dist_sys (“inspektor.com”)
 
 dist_sys(r) { 
@@ -71,7 +72,7 @@ dist_sys(r) {
 ```
 
 
-```js
+```
 safe_repo(p) = true {...}
 safe_repo(p) = 	    {...}
 

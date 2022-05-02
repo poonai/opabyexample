@@ -9,7 +9,12 @@ weight: 6
 
 {{< columns >}}
 
-Consider an array:-  <br>
+The `some`  keyword allows queries to explicitly declare local variables.
+
+Consider `some` as a looping structure like for loop in any programming language. 
+
+
+Let us consider an array:  <br>
 ```projects = [“inspektor”, “dgraph”, “opabyexample”]```
 
 
@@ -27,7 +32,7 @@ Consider an array:-  <br>
 <--->
 
 
-```js
+```
 Iterative approach (in programming languages):
 for i in len(projects): 
     if input["repo"] == projects[i]:
@@ -36,7 +41,7 @@ return false
 
 ```
 
-```js
+```
 Declarative approach (in Rego):
 is_open_source{
     some i

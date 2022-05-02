@@ -33,7 +33,7 @@ use this command for a better and direct output.
 
 <--->
 
-```js
+```
 play.rego
 1. package play
 2. default hello = false
@@ -50,19 +50,19 @@ play.rego
 <br>
 <br>
 
-```js
+```
 input.json
 1. {
 2.     "message": "world"  		
 3. }
 ```
 
-```js
+```
 Command: 
 $ opa eval -i input.json -d play.rego "data.play.hello"
 ```
 
-```js
+```
 output.json
 1. {
 2.   "result": [
@@ -83,7 +83,7 @@ output.json
 ```
 
 
-```js
+```
 $ opa eval --input input.json --data play.rego --format pretty “data.play.hello”
 > true
 ```

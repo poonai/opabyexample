@@ -19,7 +19,7 @@ weight: 2
 - validating input JSON data using global variable ```input```.
 <--->
 
-```js
+```
 examples
 1. s0 := input.servers[0]
 2. s1 := input.servers[1]	
@@ -29,7 +29,7 @@ examples
 
 <br><br><br><br>
 
-```js
+```
 1. input.servers[0].id == "app"
 ```
 
