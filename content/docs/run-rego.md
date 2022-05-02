@@ -24,14 +24,14 @@ Explanation.
 ```false``` as 1 is not greater than 2, condition not satisfied.
 <--->
 
-```js
+```
 command
 $ opa eval '1 > 2'
 
 ```
 
 
-```js
+```
 Output.json
 1. {				
 2.   "result": [
