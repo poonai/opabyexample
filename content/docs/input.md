@@ -1,36 +1,47 @@
 ---
 Title: "Input"
 type: docs
-weight: 2
+weight: 3
 ---
 
 # OPA By Example: Input
 
 {{< columns >}}
 
+The provied input json is binded to the global variable called `input`. The respective property are accessed using `.` (dot) operator.
 
-```input``` - global variable representing JSON policy query.<br>
-```data``` - global variable containing external data.
+<br>
 
-- here, ```servers``` is a JSON data object with some array values associated with it.
+The `message` property is assigned to variable `m`. 
 
-<br><br><br>
-
-- validating input JSON data using global variable ```input```.
 <--->
 
 ```
-examples
-1. s0 := input.servers[0]
-2. s1 := input.servers[1]	
+package play
+
+default hello = false
+
+hello {
+    m := input.message
+    m == "world"
+}
 
 ```
 
+```
+input.json
 
-<br><br><br><br>
+{
+    "message": "world"
+}
+```
 
 ```
-1. input.servers[0].id == "app"
+output 
+
+{
+    "hello": true
+}
 ```
 
 {{< /columns >}}

@@ -12,9 +12,8 @@ Remember **if**, **else if**, **elif**, **else** and all other forms of conditio
 
 Rego just has one, `else`
 
-Here, `else` is used in similar fashion as in every typical programming language, when you wish to check multiple rules or rule bodies for a given condition. 
+`else` is used in similar fashion as in every typical programming language, when you wish to check multiple bodies of the rule.
 
-Connect multiple rule bodies with an `else` statement and check the conditions on the next body when the conditions on the first rule body are not satisfied.
 
 **Note:**
 - To avoid ambiguity, make sure to use the form else = when using an else statement.
@@ -22,28 +21,32 @@ Connect multiple rule bodies with an `else` statement and check the conditions o
 - There is no limit imposed on the number of else clauses on a rule.
 
 <--->
+https://play.openpolicyagent.org/p/HLnVL4jjtl
 ```
-rule.rego
-default is_swapped = false
-is_swapped = {
-	a == 5
-	b == 10 
+package play 
+
+default allow = false
+
+allow {
+   input.role = "admin"
 } else {
-	a := 5
-	b := 10
+   input.role = "special-user"
 }
+
 ```
 
 ```
 input.json
-{ 
-    “a”: “10”,  “b” :”5” 
+{
+    "role": "special-user"
 }
 ```
 
 ```
-output.json 
-> true
+output:
+{
+    "allow": true
+}
 ```
 
 

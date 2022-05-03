@@ -7,30 +7,52 @@ weight: 1
 # OPA By Example: Hello World via CLI
 
 {{< columns >}}
+Here's our first rego policy, which evaluates the `hello` rule. The complete policy code can be seen here.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+
+The given policy takes JSON input.
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
 
-<br>
-
-- Input message (from input.json file) is assigned to a variable ```m```.
-- Compares ```m``` with a string. <br>
-<strong>Note</strong>: Each rego line is like a IF statement, if condition is satisfied, rule is validated.
-
-- The ```:=``` syntax is shorthand for declaring and initializing a variable.
+To evaluate the policy, use `opa eval` command. The input file and policy file are mentioned using `-i` and `-d` flags respectively. 
 
 <br>
 
-- The input value provided by us, here we passed “message” value.
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<strong>in line 5: </strong> ```true``` condition satisfied
-
-<br><br><br><br><br><br><br><br><br><br>
-<strong>OR </strong> 
-use this command for a better and direct output.
-
+We are getting result as `true` since we are querying the rule `hello`
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Results can be pretty printed using `--format pretty`
 <--->
 
 ```
@@ -44,10 +66,6 @@ play.rego
 7. }							
 
 ```
-
-<br>
-<br>
-<br>
 <br>
 
 ```

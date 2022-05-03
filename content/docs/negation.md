@@ -8,38 +8,60 @@ weight: 5
 # OPA By Example: Negation
 
 {{< columns >}}
+Negation keyword `not` does the following
 
 - ```not``` turns ```undefined``` into ```true```.
 - ```not``` turns ```false``` into ```true```.
 - ```not``` turns everything else into ```undefined```.
 
-Consider a rego object ```obj``` (-->).
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-### Check path existence by writing the path.
-- check if path exists <br>
-```obj.spec.speed```
-
-- check if path does not exist <br>
-```not obj.spec.speed```
-
+`deny` rule is evaluated to `true` because `not` keyword turned the `false` into `true`
 
 
 <--->
-<br><br><br>
+https://play.openpolicyagent.org/p/cpyuU3Yi8S
+```
+package play
+
+allowed_admins = {"poonai",
+ "priyansh"}
+
+deny {
+   not allowed_admins[input.user]
+}
+```
 
 ```
-obj := {car":"Tata", 
-"color": ["black", “white”], 
-"spec": {"speed": 227}}
+input.json 
+{
+    "user": "hacker"
+}
 ```
 
 ```
-> not obj.x	// true, there exist no ‘x’
-> not false	// true
-> not 22	// undefined
-> not true  // undefined
+output:
+{
+    "allowed_admins": [
+        "poonai",
+        "priyansh"
+    ],
+    "deny": true
+}
 ```
-
 
 {{< /columns >}}

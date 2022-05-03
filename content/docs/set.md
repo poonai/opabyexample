@@ -7,44 +7,69 @@ weight: 4
 # OPA By Example: Set
 
 {{< columns >}}
-Sets are unordered collections of unique values. 
+<br>
+Sets are unordered collections of unique values. Values can be in terms of scalars, variables, references, and composite values.
+<br>
+<br>
+<br>
+<br>
 
+We have an set called `allowed_databases` which are defined using `{}`
+<br>
+<br>
+<br>
+<br>
+The values inside the sets are looked up using `[]`
 
-Line 1: `e` is a scalar set.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-Line 2: `st` is a set of strings.
-
-Line 3: checks if `cake` is present in the set or not.
-
-In rego, Sets can be defined in terms of scalars, variables, references, and composite values.
-
-Dot(.) is shorthand for Brackets []. 
-
-Rego makes ```x.y``` into ```×["y"]```
-
-- In practice, dot(.) is used <strong>only</strong> with objects, not arrays or sets.
-
-- Brackets [] inspects sets.
-
-
+The `allow` rule is evaluated to `false` since database world doesn't exist in the set `allowed_databases`
 <--->
 
+https://play.openpolicyagent.org/p/V9ez0x0OGE
 ```
-1. e  := {13,23,33} 
-2. st := {"cat", "dog", "rabbit"}
+package play
+
+default allow = false
+
+allowed_databases = {"stagging",
+ "referralcampaign"}
+
+
+
+allow {
+   allowed_databases[input.database]
+}
 
 ```
 
 ```
-3. st["cake"] 	// "cake"
+input:
+{
+    "database": "world"
+}
 
 ```
 
 ```
-4. key := "India"
-5. st[key] 		// “India”
+output: 
+{
+    "allow": false,
+    "allowed_databases": [
+        "referralcampaign",
+        "stagging"
+    ]
+}
 
 ```
-
-
 {{< /columns >}}

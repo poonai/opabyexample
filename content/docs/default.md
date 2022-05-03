@@ -8,44 +8,28 @@ weight: 11
 
 {{< columns >}}
 
-**Syntax:** 
-`default <rule name> = <value>`
-
-If the rule body is not satisfied, it is `undefined`, in which case the `default` value is assigned if the `default` value is specified.
+`default` keyword is used to assign default value for the rule.
 
 <br>
+<br>
 
-When the allow document is queried, the return value will be either `true` or `false`
-
-<br><br><br><br><br><br><br>
-
-The allow document would be `undefined` for the same input if it didn't have a default definition.
+`false` is assigned to the rule `allow`
 
 <--->
+https://play.openpolicyagent.org/p/LNJ9Tdosd2
 
 ```
-default allow := false
-request_method {
-    input.user == "zriyansh"
-    input.method == "POST"
-}
+package play 
 
-allow {
-    input.user == "poonai"
-}
+default allow = false
+
 ```
 
 ```
+output:
 {
-   "user": "poonai",
-   "method": "POST"
+    "allow": false
 }
-```
-
-```
-false 
-// as poonai doesn’t have the 
-// rights to use method POST.
 ```
 
 

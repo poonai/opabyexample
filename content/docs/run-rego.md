@@ -2,7 +2,7 @@
 ---
 Title: "Run Rego"
 type: docs
-weight: 3
+weight: 2
 ---
 
 # OPA By Example: Run Rego

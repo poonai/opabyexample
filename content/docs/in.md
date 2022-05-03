@@ -8,37 +8,43 @@ weight: 13
 
 {{< columns >}}
 
-**Import Statement:** - import future.keywords.in
-
 The membership operator `in` lets you check if an element is part of a collection (array, set, or object). 
-
-<br><br><br><br><br><br>
 
 It always evaluates to either `true` or `false`, not `undefined`.
 
-<--->
+<br>
+<br>
+<br>
+<br>
+<br>
 
+checking whether `delete` exist in the array `allowed_statements`
+
+<--->
+https://play.openpolicyagent.org/p/iGDupYLFkK
 ```
-values := [] {
-    val1 := 404 in [404, 200, 403]	#array
-    val2 := “dgraph” in {“inspektor”, 
-                        “opa”, 
-                        “signoz”}
-    val3 := “poonai” in {
-        “mentor”: “poonai”, 
-        “mentee”: “zriyansh” 
-        }
+package play 
+
+import future.keywords.in
+
+allowed_statements = ["query", "update", "insert"]
+
+default allow = false 
+
+allow {
+    "delete" in allowed_statements
 }
 ```
 
 ```
 output.json
 {
-  "values": [
-    true,
-    false,
-    true
-  ]
+    "allow": false,
+    "allowed_statements": [
+        "query",
+        "update",
+        "insert"
+    ]
 }
 ```
 
