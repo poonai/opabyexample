@@ -18,7 +18,7 @@ some condition.
 
 <br>
 
-`is_athuor` rule is evaulated based on the input. if the `author` is set to `poonai` then the value is set to `true`, otherwise `false`
+`is_author` rule is evaulated based on the input. if the `author` is set to `poonai` then the value is set to `true`, otherwise `false`
 <--->
 
 https://play.openpolicyagent.org/p/H2FDgC8RkH

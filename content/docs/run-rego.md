@@ -10,18 +10,18 @@ weight: 2
 {{< columns >}}
 
 
-The simplest way to interact with OPA is via the command-line using the ```opa eval``` sub-command
+The simplest way to interact with OPA is via the command-line using the `opa eval` sub-command
 
 The output generated, when we run the query, is JSON formatted.
 
 Explanation.
-> Here, ```“value”: false```, indicates that the condition we were testing for is not true.
+> Here, `“value”: false`, indicates that the condition we were testing for is not true.
 
 <br>
 <br>
 
 <strong>line 6: </strong><br>
-```false``` as 1 is not greater than 2, condition not satisfied.
+`false` as 1 is not greater than 2, condition not satisfied.
 <--->
 
 ```

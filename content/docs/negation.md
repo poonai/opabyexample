@@ -10,9 +10,9 @@ weight: 5
 {{< columns >}}
 Negation keyword `not` does the following
 
-- ```not``` turns ```undefined``` into ```true```.
-- ```not``` turns ```false``` into ```true```.
-- ```not``` turns everything else into ```undefined```.
+- `not` turns `undefined` into `true`.
+- `not` turns `false` into `true`.
+- `not` turns everything else into `undefined`.
 
 <br>
 <br>
