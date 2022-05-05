@@ -2,7 +2,7 @@
 ---
 Title: "Negation"
 type: docs
-weight: 5
+weight: 6
 ---
 
 # OPA By Example: Negation

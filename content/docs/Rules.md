@@ -2,7 +2,7 @@
 ---
 Title: "Rules"
 type: docs
-weight: 7
+weight: 5
 ---
 
 # OPA By Example: Rules

@@ -1,7 +1,7 @@
 ---
 Title: "Variables"
 type: docs
-weight: 8
+weight: 4
 ---
 
 # OPA By Example: Variables
@@ -41,7 +41,8 @@ The policy only resulted `sites` variable not `current_user` variable becauase `
 <br>
 <br>
 https://play.openpolicyagent.org/p/E0VhMNnjqq
-```js
+
+```
 package play
 
 sites := [
